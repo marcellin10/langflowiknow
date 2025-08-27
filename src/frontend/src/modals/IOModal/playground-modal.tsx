@@ -428,40 +428,15 @@ export default function IOModal({
                   />
                 )}
                 {sidebarOpen && showPublishOptions && (
-                  <div className="absolute bottom-2 left-0 flex w-full flex-col gap-8 border-t border-border px-2 py-4 transition-all">
-                    <div className="flex items-center justify-between px-2">
-                      <div className="text-sm">Theme</div>
-                      <ThemeButtons />
+                    <div className="absolute bottom-2 left-0 flex w-full flex-col gap-8 border-t border-border px-2 py-4 transition-all">
+                      <div className="flex items-center justify-between px-2">
+                        <div className="text-sm">Theme</div>
+                        <ThemeButtons />
+                      </div>
                     </div>
-                    <Button
-                      onClick={LangflowButtonClick}
-                      variant="primary"
-                      className="w-full !rounded-xl shadow-lg"
-                    >
-                      <LangflowLogoColor />
-                      <div className="text-sm">Built with Langflow</div>
-                    </Button>
-                  </div>
-                )}
+                  )}
               </div>
             </div>
-            {!sidebarOpen && showPublishOptions && (
-              <div className="absolute bottom-6 left-4 hidden transition-all md:block">
-                <ShadTooltip
-                  styleClasses="z-50"
-                  side="right"
-                  content="Built with Langflow"
-                >
-                  <Button
-                    variant="primary"
-                    className="h-12 w-12 !rounded-xl !p-4 shadow-lg"
-                    onClick={LangflowButtonClick}
-                  >
-                    <LangflowLogoColor className="h-[18px] w-[18px] scale-150" />
-                  </Button>
-                </ShadTooltip>
-              </div>
-            )}
             <div className="flex h-full min-w-96 flex-grow bg-background">
               {selectedViewField && !sessionsLoading && (
                 <SelectedViewField
