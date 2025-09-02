@@ -130,7 +130,7 @@ notebooks
 .Python
 build/
 develop-eggs/
-dist/
+# dist/
 downloads/
 eggs/
 .eggs/
