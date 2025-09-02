@@ -4,7 +4,7 @@ import useDetectScroll, {
 } from "@smakss/react-scroll-direction";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { v5 as uuidv5 } from "uuid";
-import LangflowLogo from "@/assets/LangflowLogo.svg?react";
+import iknowiaLogo from "@/assets/iknowia.png";
 import { TextEffectPerChar } from "@/components/ui/textAnimation";
 import CustomChatInput from "@/customization/components/custom-chat-input";
 import { ENABLE_IMAGE_ON_PLAYGROUND } from "@/customization/feature-flags";
@@ -289,23 +289,39 @@ export default function ChatView({
           ) : (
             <>
               <div className="flex h-full w-full flex-col items-center justify-center">
-                <div className="flex flex-col items-center justify-center gap-4 p-8">
-                  <LangflowLogo
-                    title="Langflow logo"
-                    className="h-10 w-10 scale-[1.5]"
-                  />
-                  <div className="flex flex-col items-center justify-center">
-                    <h3 className="mt-2 pb-2 text-2xl font-semibold text-primary">
-                      New chat
+                <div className="flex flex-col items-center justify-center gap-6 p-8 max-w-2xl mx-auto">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-xl"></div>
+                    <div className="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20">
+                      <img
+                        src={iknowiaLogo}
+                        alt="iKnowIA Logo"
+                        className="h-28 w-28 object-contain mx-auto"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center justify-center text-center space-y-4">
+                    <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      Bem-vindo ao iKnow IA
                     </h3>
+                    <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
                     <p
-                      className="text-lg text-muted-foreground"
+                      className="text-lg text-muted-foreground text-center max-w-2xl leading-relaxed px-4"
                       data-testid="new-chat-text"
                     >
-                      <TextEffectPerChar>
-                        Test your flow with a chat prompt
+                      <TextEffectPerChar
+                        preset="fade"
+                        className="text-2xl font-light text-foreground text-center"
+                        per="word"
+                      >
+                        Seu assistente inteligente para negócios. Faça perguntas
+                        e obtenha insights personalizados.
                       </TextEffectPerChar>
                     </p>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground/70 mt-6">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span>Pronto para ajudar</span>
+                    </div>
                   </div>
                 </div>
               </div>

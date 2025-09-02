@@ -428,13 +428,13 @@ export default function IOModal({
                   />
                 )}
                 {sidebarOpen && showPublishOptions && (
-                    <div className="absolute bottom-2 left-0 flex w-full flex-col gap-8 border-t border-border px-2 py-4 transition-all">
-                      <div className="flex items-center justify-between px-2">
-                        <div className="text-sm">Theme</div>
-                        <ThemeButtons />
-                      </div>
+                  <div className="absolute bottom-2 left-0 flex w-full flex-col gap-8 border-t border-border px-2 py-4 transition-all">
+                    <div className="flex items-center justify-between px-2">
+                      <div className="text-sm">Theme</div>
+                      <ThemeButtons />
                     </div>
-                  )}
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex h-full min-w-96 flex-grow bg-background">

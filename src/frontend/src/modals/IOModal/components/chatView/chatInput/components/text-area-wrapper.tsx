@@ -24,7 +24,7 @@ const TextAreaWrapper = ({
     } else if (noInput) {
       return CHAT_INPUT_PLACEHOLDER;
     } else {
-      return "Send a message...";
+      return "Digite sua mensagem...";
     }
   };
 
